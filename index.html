@@ -2,54 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
+        /* Styling for the entire body and background image */
         body {
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
             font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('comingsoon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .coming-soon-container {
-            position: relative;
-            width: auto;
+
+        /* Styling for the "Coming Soon" text */
+        .coming-soon {
+            font-size: 3rem; /* Adjust size here */
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding: 10px 20px;
+            border-radius: 5px;
+            animation: fadeInZoom 3s infinite; /* 3s animation duration */
         }
-        .coming-soon-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            animation: pulsate 2s infinite;
-        }
-        @keyframes pulsate {
+
+        /* Animation for "Coming Soon" text */
+        @keyframes fadeInZoom {
             0% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.7;
+                opacity: 0.5;
+                transform: scale(0.9);
             }
             50% {
-                transform: translate(-50%, -50%) scale(1.1);
                 opacity: 1;
+                transform: scale(1.05);
             }
             100% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.7;
+                opacity: 0.5;
+                transform: scale(0.9);
             }
         }
     </style>
 </head>
 <body>
-    <div class="coming-soon-container">
-        <img src="comingsoon.jpg" alt="Background Image">
-        <div class="coming-soon-text">Coming Soon</div>
-    </div>
+    <div class="coming-soon">Coming Soon</div>
 </body>
 </html>
