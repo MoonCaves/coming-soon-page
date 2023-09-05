@@ -28,14 +28,14 @@
             font-size: 4vw; /* This makes the font size responsive */
             color: white;
             text-shadow: 2px 2px 4px #000000;
-            animation: fadeInZoom 2s both;
+            animation: pulse 1.5s infinite alternate;
         }
 
         /* Animation for the "Coming Soon" text */
-        @keyframes fadeInZoom {
+        @keyframes pulse {
             from {
-                opacity: 0;
-                transform: scale(0.8);
+                opacity: 0.5;
+                transform: scale(0.95);
             }
 
             to {
