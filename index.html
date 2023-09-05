@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
-        /* Styling for the entire body and background image */
-        body {
+        /* Reset some default browser styling */
+        body, h1 {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 0;
+        }
+
+        /* Set up the background image */
+        body {
             height: 100vh;
-            background-image: url('comingsoon.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: url('path_to_your_image.jpg') no-repeat center center fixed;
+            background-size: cover; /* This ensures the background image covers the full viewport */
+            font-family: 'Arial', sans-serif; /* You can choose any other font if you like */
+            display: flex;
+            align-items: center; /* This centers the content vertically */
+            justify-content: center; /* This centers the content horizontally */
         }
 
-        /* Styling for the "Coming Soon" text */
-        .coming-soon {
-            font-size: 3rem; /* Adjust size here */
-            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-            padding: 10px 20px;
-            border-radius: 5px;
-            animation: fadeInZoom 3s infinite; /* 3s animation duration */
+        /* Style for the "Coming Soon" text */
+        h1 {
+            font-size: 4vw; /* This makes the font size responsive */
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeInZoom 2s both;
         }
 
-        /* Animation for "Coming Soon" text */
+        /* Animation for the "Coming Soon" text */
         @keyframes fadeInZoom {
-            0% {
-                opacity: 0.5;
-                transform: scale(0.9);
+            from {
+                opacity: 0;
+                transform: scale(0.8);
             }
-            50% {
+
+            to {
                 opacity: 1;
-                transform: scale(1.05);
-            }
-            100% {
-                opacity: 0.5;
-                transform: scale(0.9);
+                transform: scale(1);
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="coming-soon">Coming Soon</div>
+    <h1>Coming Soon</h1>
 </body>
+
 </html>
